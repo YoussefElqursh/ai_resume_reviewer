@@ -82,3 +82,18 @@ Follow these steps to set up and run the project locally.
 - **Frontend**: Flutter, GoRouter, File Picker, HTTP, Lottie Animations.
 - **Backend**: Express, Cors, Multer, Axios, PDF-Parse.
 - **AI Models**: Groq API (`llama-3.3-70b-versatile`).
+
+---
+
+## 📸 App Screenshots
+
+### 📤 File Upload & Selection Flow
+| 1. Select PDF from Device | 2. Selected File | 3. Ready to Analyze |
+|:---:|:---:|:---:|
+| <img src="assets/images/file_explorer_downloads.png" width="260" alt="File Explorer"/> | <img src="assets/images/resume_upload_selected.png" width="260" alt="Upload Selected"/> | <img src="assets/images/resume_upload_waiting.png" width="260" alt="Ready to Analyze"/> |
+
+### 📊 ATS Analysis & Recommendations
+| 4. ATS Score & Overview | 5. Actionable Improvement Tab |
+|:---:|:---:|
+| <img src="assets/images/resume_details_overview.png" width="280" alt="Score Overview"/> | <img src="assets/images/resume_details_improvement.png" width="280" alt="Detailed Improvements"/> |
+
