@@ -6,27 +6,26 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter router = GoRouter(
+  initialLocation: RoutesConstants.splash,
   routes: <RouteBase>[
     GoRoute(
       path: RoutesConstants.splash,
       builder: (BuildContext context, GoRouterState state) {
         return const SplashScreen();
       },
-      routes: <RouteBase>[
-        GoRoute(
-          path: RoutesConstants.filePicker,
-          builder: (BuildContext context, GoRouterState state) {
-            return const FilePickerScreen();
-          },
-        ),
-        GoRoute(
-          path: RoutesConstants.analyze,
-          builder: (context, state) {
-            final data= state.extra as Map<String, dynamic>;
-            return AnalysisResultScreen(data: data);
-          },
-        ),
-      ],
+    ),
+    GoRoute(
+      path: RoutesConstants.filePicker,
+      builder: (BuildContext context, GoRouterState state) {
+        return const FilePickerScreen();
+      },
+    ),
+    GoRoute(
+      path: RoutesConstants.analyze,
+      builder: (context, state) {
+        final data = state.extra as Map<String, dynamic>;
+        return AnalysisResultScreen(data: data);
+      },
     ),
   ],
 );

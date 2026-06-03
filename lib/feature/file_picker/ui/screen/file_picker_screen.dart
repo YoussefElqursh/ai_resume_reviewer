@@ -73,7 +73,7 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
                       final result = await ApiService.analyzeResume(file!);
                       if (mounted) {
                         context.pop();
-                        context.go(RoutesConstants.analyze, extra: result);
+                        context.push(RoutesConstants.analyze, extra: result);
                       }
                     } catch (e) {
                       if (mounted) {
