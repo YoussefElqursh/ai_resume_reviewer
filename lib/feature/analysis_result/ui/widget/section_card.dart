@@ -7,22 +7,39 @@ class SectionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    if (points.isEmpty) return const SizedBox.shrink();
+
     return Padding(
-      padding: const EdgeInsetsGeometry.only(bottom: 20),
+      padding: const EdgeInsets.only(bottom: 20),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+          Center(
+            child: Text(
+              title,
+              style: theme.textTheme.titleLarge?.copyWith(fontSize: 18),
+            ),
           ),
-          Divider(),
+          const Divider(),
           ...points.map(
             (point) => Padding(
-              padding: const EdgeInsetsGeometry.only(bottom: 18),
+              padding: const EdgeInsets.only(bottom: 12),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text("* "),
-                  Expanded(child: Text(point)),
+                  Icon(
+                    Icons.circle,
+                    size: 7,
+                    color: theme.primaryColor,
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      point,
+                      style: theme.textTheme.bodyLarge,
+                    ),
+                  ),
                 ],
               ),
             ),
