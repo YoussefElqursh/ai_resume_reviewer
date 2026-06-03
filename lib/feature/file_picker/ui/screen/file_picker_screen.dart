@@ -71,12 +71,12 @@ class _FilePickerScreenState extends State<FilePickerScreen> {
                     );
                     try {
                       final result = await ApiService.analyzeResume(file!);
-                      if (mounted) {
+                      if (context.mounted) {
                         context.pop();
                         context.push(RoutesConstants.analyze, extra: result);
                       }
                     } catch (e) {
-                      if (mounted) {
+                      if (context.mounted) {
                         context.pop();
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
